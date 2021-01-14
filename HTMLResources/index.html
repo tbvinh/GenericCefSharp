@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+<script>
+    //This function gets the text from the input and passes it 
+    //into the Show method of the registered .NET object
+    function ShowDotNetMessage() {
+        var message = document.getElementById('textbox').value;
+        dotNetMessage.show(message);
+    }
+    function ShowDotNetMessageAbout() {
+        
+        dotNetMessage.showAbout();
+    }
+</script>
+<!--This input contains the text we want to pass into the .NET object-->
+<input type="text" id="textbox" value="Vinh Trần"/>
+
+<!--This button call the JavaScript method which passes the input text to the .NET object-->
+<button onclick="ShowDotNetMessage()">Show message</button>
+<button onclick="ShowDotNetMessageAbout()">Show About</button>
+</body>
+</html>
