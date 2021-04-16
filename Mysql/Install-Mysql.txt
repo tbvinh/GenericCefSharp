@@ -1,0 +1,13 @@
+﻿
+https://dev.mysql.com/downloads/mysql/5.7.html
+https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.32-win32.zip
+1. Extract the downloaded MySQL Server Archive to the desired location for MySQL server files (example : D:\mysql\mysql-5.7.17-winx64)
+2. Create a directory for MySQL's database's data files (example : D:\mysql\mydb)
+3. Create a directory for MySQL's database logging (example D:\mysql\logs)
+4. Create MySQL options file (example location : D:\mysql\config.ini)
+5. Initialize MySQL database files using Windows Batch File/Command Prompt
+   "D:\Softs\mysql-5.7.32-win32\bin\mysqld.exe" --defaults-file="D:\\Projects\\GenericCefSharp\\Mysql\\config.ini" --initialize-insecure --console --log_syslog=0
+6. Create a batch file to start the MySQL database server
+   "D:\Softs\mysql-5.7.32-win32\bin\mysqld.exe" --defaults-file="D:\\Projects\\GenericCefSharp\\Mysql\\config.ini" --log_syslog=0 --console
+7. Create a batch file to shutdown the MySQL database server
+   "D:\Softs\mysql-5.7.32-win32\bin\mysqladmin.exe" --defaults-file="D:\\Projects\\GenericCefSharp\\Mysql\\config.ini" shutdown

@@ -1,0 +1,12 @@
+﻿1. change password
+    D:\Softs\mysql-5.7.32-win32\bin\mysql -P 55555 -u root --skip-password
+    ALTER USER 'root'@'localhost' IDENTIFIED BY 'root123';
+
+2. stop mysql server
+    .\bin\mysqladmin --defaults-file=.\config.ini -u root --password=root123 shutdown 
+
+3. start mysql server
+    .\bin\mysqld.exe --defaults-file=.\config.ini
+
+4. connecting to mysql
+    D:\Softs\mysql-5.7.32-win32\bin\mysql -P 55555 -u root --password=root
