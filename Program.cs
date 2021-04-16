@@ -1,4 +1,5 @@
 ﻿using CefSharp;
+using GenericCefSharp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace TestCefSharp
         static void Main()
         {
             Cef.EnableHighDPISupport();
+            SqliteUtil.initSetting();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frm = new frmMain();

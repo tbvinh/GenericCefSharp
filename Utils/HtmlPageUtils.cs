@@ -14,8 +14,15 @@ namespace GenericCefSharp.Utils
         }
         public static string getIndex()
         {
-            string page = string.Format("{0}HTMLResources/index.html", GetAppLocation());
+
+            string page;// = string.Format("{0}HTMLResources/index.html", GetAppLocation());
+            page = SqliteUtil.config[Enum.GetName(typeof(SqliteUtil.eSetting), SqliteUtil.eSetting.html)];
             return page;
+        }
+        public static string getInjectJS()
+        {
+            string url = SqliteUtil.config[Enum.GetName(typeof(SqliteUtil.eSetting), SqliteUtil.eSetting.js)];
+            return url;
         }
     }
 }

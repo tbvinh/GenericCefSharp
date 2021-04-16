@@ -8,15 +8,19 @@
 <body>
     
 <script>
-    //This function gets the text from the input and passes it 
-    //into the Show method of the registered .NET object
+
+    
     function ShowDotNetMessage() {
         var message = document.getElementById('textbox').value;
-        dotNetMessage.show(message);
+        if(window['dotNetObject']) dotNetObject.command(showMessage, message)
     }
     function ShowDotNetMessageAbout() {
-        
-        dotNetMessage.showAbout();
+        if(window['dotNetObject']) dotNetObject.command(showAbout)
+    }
+    function Showfd5c7908f54e(){
+        if(window['dotNetObject']){
+            dotNetObject.command("a")
+        }
     }
 </script>
 <!--This input contains the text we want to pass into the .NET object-->
@@ -25,5 +29,6 @@
 <!--This button call the JavaScript method which passes the input text to the .NET object-->
 <button onclick="ShowDotNetMessage()">Show message</button>
 <button onclick="ShowDotNetMessageAbout()">Show About</button>
+<button onclick="Showfd5c7908f54e()">Show About</button>
 </body>
 </html>
